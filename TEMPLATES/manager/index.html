@@ -1,0 +1,32 @@
+{% extends "../utils/layout.html" %}
+
+{% block content %}
+
+<div class="min-h-screen p-4 bg-slate-100 border-solid border-slate-200 border-2 grid items-start content-start gap-2">
+    <form hx-post="{% url 'manager:search-product' %}" hx-target="#products-area" hx-swap="innerHTML" method="get" class="grid gap-2 border-solid border-slate-200 border-2 w-9/12 justify-self-center p-4">
+        <div class="form-group flex gap-2">
+            <input type="search" name="product-name" id="" placeholder="Enter Product Name" class="border-solid border-slate-200 border-2 w-full p-2">
+            <input type="submit" class="px-4 py-2 bg-teal-900 text-white cursor-pointer" value="search">
+        </div>
+        <div class="form-group platform-choices">
+            <ul class="list-none grid gap-4 grid-flow-col justify-start align-center">
+                <li class="grid gap-2 grid-flow-col items-center">
+                    <input type="checkbox" name="platform-choice" id="amazon" value="amazon" checked>
+                    <label for="amazon">Amazon</label>
+                </li>
+                <li class="grid gap-2 grid-flow-col items-center">
+                    <input type="checkbox" name="platform-choice" id="ebay" value="ebay">
+                    <label for="ebay">Ebay</label>
+                </li>
+                <li class="grid gap-2 grid-flow-col items-center">
+                    <input type="checkbox" name="platform-choice" id="jumia" value="jumia">
+                    <label for="jumia">Jumia</label>
+                </li>
+            </ul>
+        </div>
+    </form>
+
+    <div id="products-area" class="grid gap-2 border-solid border-slate-200 border-2 w-9/12 justify-self-center p-4">
+    </div>
+</div>
+{% endblock %}
