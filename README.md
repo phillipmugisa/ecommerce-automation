@@ -1,18 +1,27 @@
-# ecommerce-automation
-This project is a search automation for different ecommerce platforms
+# Python Web based e-commerce automations
+This is a project that enables a user to perform a search for a given product on multiple e-commerce platforms(amazon, ebay, jumia) using one search bar. This project takes away the burden of having to manually perform the same search on different site by utilizing web automation tools and rendering the output on one webpage.
 
-## setting up project
-```
-    sudo apt install python=3.10.0
+## Tools Used
+- Python (version 3.9+)
+- Django
+- HTMX
+- Selenium
+
+- Usage: 
+```bash
+    git clone https://github.com/phillipmugisa/ecommerce-automation.git
+    cd ecommerce-automation
+
     python -m venv venv
-    source ./venv/bin/activate
-    pip install -r requirements.txt
+    ./venv/Scripts/activate (windows)
+    source ./venv/bin/activate (linux)
+
+    python -m pip install -r requirements.txt
+
     python manage.py runserver
 ```
 
-## setting up product scrapper package (optional)
-```
-    cd ./product_scrapper
-    python setup.py sdist bdist_wheel
-    pip install .
-```
+### Using 
+- localhost:8000
+
+![Product Detail View](./sample.jpg)
