@@ -17,11 +17,23 @@ This is a project that enables a user to perform a search for a given product on
     source ./venv/bin/activate (linux)
 
     python -m pip install -r requirements.txt
+```
 
+
+## setting up product scrapper package
+```
+    cd ./product_scrapper
+    pip install setuptools wheel
+    python setup.py sdist bdist_wheel
+    pip install .
+```
+## Setting server
+```
     python manage.py runserver
 ```
 
-### Using 
+
+## Using the Project
 - localhost:8000
 
 ![Product Detail View](./sample.jpg)
